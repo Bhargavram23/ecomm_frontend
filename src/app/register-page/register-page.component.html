@@ -1,0 +1,43 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="row">
+            <div class="main-content">
+                <div class="section-content section-content-p30">
+                    <div class="row">
+                        <div class="register-container">
+                            <h2>Register</h2>
+                            <p [textContent]="message"></p>
+                            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                                <div class="form-group">
+                                    <label for="name">Name:</label>
+                                    <input id="name" formControlName="name" type="text" required />
+                                    <div *ngIf="registerForm.get('name').invalid && registerForm.get('name').touched"
+                                        class="error">
+                                        Name is required.
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number:</label>
+                                    <input id="phone" formControlName="phoneNumber" type="text" required />
+                                    <div *ngIf="registerForm.get('phoneNumber').invalid && registerForm.get('phoneNumber').touched"
+                                        class="error">
+                                        Valid phone number is required (10 digits).
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input id="email" formControlName="email" type="email" required />
+                                    <div *ngIf="registerForm.get('email').invalid && registerForm.get('email').touched"
+                                        class="error">
+                                        Valid email is required.
+                                    </div>
+                                </div>
+                                <button type="submit" [disabled]="registerForm.invalid">Register</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

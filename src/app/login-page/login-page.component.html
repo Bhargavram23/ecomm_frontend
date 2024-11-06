@@ -1,0 +1,42 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="row">
+            <div class="main-content">
+                <div class="section-content section-content-p30">
+                    <div class="row">
+                        <!-- login.component.html -->
+                        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                            <div>
+                                <label for="email">Email:</label>
+                                <input id="email" formControlName="email" type="email" />
+                                <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
+                                    <small *ngIf="loginForm.get('email')?.errors?.['required']">Email is
+                                        required.</small>
+                                    <small *ngIf="loginForm.get('email')?.errors?.['email']">Invalid email
+                                        format.</small>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="password">Password:</label>
+                                <input id="password" formControlName="password" type="password" />
+                                <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+                                    <small *ngIf="loginForm.get('password')?.errors?.['required']">Password is
+                                        required.</small>
+                                    <small *ngIf="loginForm.get('password')?.errors?.['minlength']">Password must be at
+                                        least 6 characters long.</small>
+                                </div>
+                            </div>
+                            <button class="butn" type="submit" [disabled]="loginForm.invalid">Login</button>
+                            <button class="btn btn-warning" (click)="router.navigate(['/register']);"
+                                style="background-color: #84ff00;"> New
+                                User?
+                                Register here </button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

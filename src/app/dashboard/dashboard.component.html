@@ -1,0 +1,48 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="row">
+            <div class="main-content">
+                <div class="section-content section-content-p30">
+                    <div class="row">
+                        <div class="dashboard">
+                            <h1>Admin Dashboard</h1>
+                            <div class="cards">
+                                <div class="card">
+                                    <i class="fas fa-users"></i>
+                                    <div class="card-info">
+                                        <h2>Total Customers</h2>
+                                        <p>{{ dashboardData?.customerCount }}</p>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <div class="card-info">
+                                        <h2>Total Orders Placed</h2>
+                                        <p>{{ dashboardData?.totalOrderQty }}</p>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <i class="fas fa-check-circle"></i>
+                                    <div class="card-info">
+                                        <h2>Total Successful Orders</h2>
+                                        <p>{{ dashboardData?.totalSuccessfullOrders }}</p>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    <div class="card-info">
+                                        <h2>Total Orders Value</h2>
+                                        <p>{{ dashboardData?.totalOrdersValue | currency }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div *ngIf="!dashboardData">
+                                <p>Loading...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

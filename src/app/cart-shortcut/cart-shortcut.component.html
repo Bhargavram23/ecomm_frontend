@@ -1,0 +1,6 @@
+<div class="cart-area d-n">
+    <a [routerLink]="['/cart']" routerLinkActive="router-link-active">
+        <div class="total">{{cartItemsCount | number:'1.0-2' }} <span> {{cartTotalAmount | currency:'INR'}}</span>
+        </div> <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+    </a>
+</div>

@@ -1,0 +1,55 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="row">
+            <div class="main-content">
+                <div class="section-content section-content-p30">
+                    <div class="row">
+
+                        <div class="reset-password-container">
+                            <h2>Reset Password</h2>
+                            <form [formGroup]="resetPasswordForm" (ngSubmit)="onSubmit()">
+                                <div>
+                                    <label for="email">Email</label>
+                                    <input id="email" formControlName="email" type="email" [readOnly]="true" />
+                                    <div
+                                        *ngIf="resetPasswordForm.get('email')?.invalid && 
+                                            (resetPasswordForm.get('email')?.touched || resetPasswordForm.get('email')?.dirty)">
+                                        <small *ngIf="resetPasswordForm.get('email')?.errors?.['required']">Email is
+                                            required.</small>
+                                        <small *ngIf="resetPasswordForm.get('email')?.errors?.['email']">Invalid email
+                                            format.</small>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label for="newPassword">New Password</label>
+                                    <input id="newPassword" formControlName="password" type="password" />
+                                    <div
+                                        *ngIf="resetPasswordForm.get('password')?.invalid && 
+                                            (resetPasswordForm.get('password')?.touched || resetPasswordForm.get('password')?.dirty)">
+                                        <small *ngIf="resetPasswordForm.get('password')?.errors?.['required']">Password
+                                            is required.</small>
+                                        <small *ngIf="resetPasswordForm.get('password')?.errors?.['minlength']">Password
+                                            must be at least 6 characters long.</small>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label for="confirmPassword">Confirm Password</label>
+                                    <input id="confirmPassword" formControlName="confirmPassword" type="password" />
+                                    <div *ngIf="isMismatch()">
+                                        <small>Passwords do not match.</small>
+                                    </div>
+                                </div>
+
+                                <button type="submit" [disabled]="resetPasswordForm.invalid">Reset Password</button>
+                            </form>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,47 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="row">
+            <div class="main-content">
+                <div class="section-content section-content-p30">
+                    <div class="row">
+                        <div class="checkout-container">
+                            <div class="checkout-section">
+                                <form [formGroup]="formGroup" (ngSubmit)="submitProcess()" class="checkout-form">
+                                    <h3 class="section-title">Customer Details</h3>
+                                    <div formGroupName="personalDetails" class="form-group details-form-group">
+                                        <label for="name">Customer Name</label>
+                                        <input id="name" formControlName="name" class="form-control">
+                                        <label for="email">Email</label>
+                                        <input id="email" formControlName="email" class="form-control">
+                                        <label for="phoneNumber">Phone Number</label>
+                                        <input id="phoneNumber" formControlName="phoneNumber" class="form-control">
+                                    </div>
+
+                                    <h3 class="section-title">Shipping Details</h3>
+                                    <div formGroupName="shippingAddress" class="form-group address-form-group">
+                                        <label for="line1">Line 1</label>
+                                        <input id="line1" formControlName="line1" class="form-control">
+                                        <label for="line2">Line 2</label>
+                                        <input id="line2" formControlName="line2" class="form-control">
+                                        <label for="city">City</label>
+                                        <input id="city" formControlName="city" class="form-control">
+                                        <label for="state">State</label>
+                                        <input id="state" formControlName="state" class="form-control">
+                                        <label for="country">Country</label>
+                                        <input id="country" formControlName="country" class="form-control">
+                                        <label for="zipcode">Zipcode</label>
+                                        <input id="zipcode" formControlName="zipcode" class="form-control">
+                                    </div>
+                                    <button type="submit" class="submit-btn">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

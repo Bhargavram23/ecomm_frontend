@@ -1,0 +1,76 @@
+/* login.component.css */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    /* Set a fixed width for the form */
+    margin: 0 auto;
+    /* Center the form horizontally */
+    padding: 20px;
+    /* Add padding around the form */
+    border: 1px solid #ccc;
+    /* Add a border */
+    border-radius: 8px;
+    /* Round the corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Add shadow for depth */
+}
+
+div {
+    margin-bottom: 15px;
+    /* Add space between fields */
+}
+
+label {
+    margin-bottom: 5px;
+    /* Space between label and input */
+    font-weight: bold;
+    /* Bold label */
+}
+
+input {
+    padding: 10px;
+    /* Padding inside the input */
+    border: 1px solid #ccc;
+    /* Border color */
+    border-radius: 4px;
+    /* Round input corners */
+    width: 100%;
+    /* Full width */
+    box-sizing: border-box;
+    /* Include padding and border in width */
+}
+
+input:focus {
+    border-color: #007bff;
+    /* Change border color on focus */
+    outline: none;
+    /* Remove outline */
+}
+
+button {
+    padding: 10px;
+    /* Padding for button */
+    background-color: #007bff;
+    /* Button background color */
+    color: white;
+    /* Text color */
+    border: none;
+    /* Remove border */
+    border-radius: 4px;
+    /* Round button corners */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+    font-size: 16px;
+    /* Font size */
+}
+
+button:hover {
+    background-color: #0056b3;
+    /* Darker shade on hover */
+}
+
+small {
+    color: red;
+    /* Error message color */
+}

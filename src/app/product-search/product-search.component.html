@@ -1,0 +1,7 @@
+<form class="form-header" onsubmit="return false;" method="GET">
+    <input #searchItem class="au-input au-input-xl" type="text" name="search" placeholder="Search for data ..."
+        (keyup)="navigateProductsPage(searchItem.value)" />
+    <button (click)="navigateProductsPage(searchItem.value)">
+        Search
+    </button>
+</form>
